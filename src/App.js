@@ -23,9 +23,15 @@ export default function App() {
             date: new Date(2021, 5, 12),
         },
     ];
+
+    //moved data one more level up - from child to parent (NewExpense to App)
+    function addExpenseHandler(expense) {
+        console.log(expense)
+    }
+
     return (
         <div>
-            <NewExpense />
+            <NewExpense onAddExpenseHandler={addExpenseHandler} />
             <Expenses items={expenses} />
         </div>
     )
