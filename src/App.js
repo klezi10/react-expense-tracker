@@ -13,7 +13,7 @@ const initialExpenses = [
     {
         id: 'e2',
         title: 'New TV',
-        amount: 799.49,
+        amount: 699.99,
         date: new Date(2021, 2, 12)
     },
     {
@@ -36,7 +36,7 @@ export default function App() {
 
     //moved data one more level up - from child to parent (NewExpense to App)
     function addExpenseHandler(expense) {
-        console.log(expense)
+        // console.log(expense)
         setExpenses(prevExpenses => {
             return [expense, ...prevExpenses]
         })
