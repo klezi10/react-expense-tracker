@@ -20,9 +20,10 @@ export default function ExpenseForm(props) {
 
     function handleSubmit(event) {
         event.preventDefault()
+        //+amountChange so that it fixes the bug of amounts being added as strings - but as numbers instead
         const expenseData = {
             title: titleChange,
-            amount: amountChange,
+            amount: +amountChange,
             date: new Date(dateChange)
         }
         props.onSaveExpenseData(expenseData)
